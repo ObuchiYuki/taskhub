@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "taskhub-cli"
+version = "1.0.0"
+description = "Private, auditable task management for a shared Linux server"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+taskhub = "taskhub.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["taskhub*"]

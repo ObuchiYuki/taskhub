@@ -1,0 +1,11 @@
+[Unit]
+Description=Run TaskHub private synchronization every minute
+
+[Timer]
+OnBootSec=1min
+OnUnitInactiveSec=1min
+Persistent=true
+Unit=taskhub-sync.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,14 @@
+[Unit]
+Description=Synchronize TaskHub with its configured private GitHub repository
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/Developer/taskhub/server
+Environment=TASKHUB_DATA_DIR=%h/.local/share/taskhub-data
+Environment=PATH=/usr/local/bin:/usr/bin:/bin
+ExecStart=/usr/bin/python3 -m taskhub --actor sync-timer --json sync
+UMask=0077
+TimeoutStartSec=220
+NoNewPrivileges=true

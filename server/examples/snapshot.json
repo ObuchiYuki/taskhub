@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "store_id": "d9eb57de-336f-402f-b847-d246eb6d6cc4",
+  "last_event_seq": 12,
+  "last_event_hash": "55872c31ac3768a3fe92a5c7b20c0bb001f76d8e38ba9f6bf6e7aaf3fa67a3df",
+  "generated_at": "2026-10-10T12:12:00Z",
+  "lanes": [
+    {
+      "id": "l_56f3ef9c7a3b49c08ca9443669e45598",
+      "created_at": "2026-10-10T12:01:00Z",
+      "created_by": "demo-agent",
+      "updated_at": "2026-10-10T12:01:00Z",
+      "updated_by": "demo-agent",
+      "revision": 1,
+      "name": "TaskHub サンプル",
+      "description": "架空データによるsnapshot v1の例"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t_760cdf98507e4fd3949f399f1f7897aa",
+      "created_at": "2026-10-10T12:02:00Z",
+      "created_by": "demo-agent",
+      "updated_at": "2026-10-10T12:09:00Z",
+      "updated_by": "demo-agent",
+      "revision": 9,
+      "title": "CLIを検証",
+      "body": "ローカルテストを実行",
+      "parent_id": null,
+      "priority": "high",
+      "due_at": null,
+      "assignee": "demo-agent",
+      "amount": {
+        "value": "0",
+        "currency": "JPY"
+      },
+      "method": "unittest",
+      "rationale": "履歴を確認する",
+      "lane_id": "l_56f3ef9c7a3b49c08ca9443669e45598",
+      "status": "done",
+      "completion": {
+        "evidence": "試験出力と仕様要件を確認済み",
+        "verified_by": "demo-agent",
+        "verified_at": "2026-10-10T12:09:00Z"
+      }
+    },
+    {
+      "id": "t_b82c97f48651438dbaf0ddd903293a87",
+      "created_at": "2026-10-10T12:10:00Z",
+      "created_by": "demo-agent",
+      "updated_at": "2026-10-10T12:11:00Z",
+      "updated_by": "demo-agent",
+      "revision": 11,
+      "title": "次の依頼",
+      "body": "",
+      "parent_id": "t_760cdf98507e4fd3949f399f1f7897aa",
+      "priority": "normal",
+      "due_at": "2026-10-12T09:00:00Z",
+      "assignee": null,
+      "amount": null,
+      "method": "",
+      "rationale": "",
+      "lane_id": "l_56f3ef9c7a3b49c08ca9443669e45598",
+      "status": "awaiting_user",
+      "completion": null
+    }
+  ],
+  "decisions": [
+    {
+      "id": "d_13f0510f3efe42b2b9a66f3229744c28",
+      "created_at": "2026-10-10T12:12:00Z",
+      "created_by": "demo-agent",
+      "updated_at": "2026-10-10T12:12:00Z",
+      "updated_by": "demo-agent",
+      "revision": 12,
+      "task_id": "t_b82c97f48651438dbaf0ddd903293a87",
+      "lane_id": "l_56f3ef9c7a3b49c08ca9443669e45598",
+      "title": "優先順位を決めてほしい",
+      "body": "どちらを先に進めるか",
+      "reason": "本人の予定に合わせる",
+      "options": [
+        "A",
+        "B"
+      ],
+      "due_at": "2026-10-11T09:00:00Z",
+      "status": "pending",
+      "answer": null,
+      "application": null
+    },
+    {
+      "id": "d_21270d163fb94caa94bc73a0ae804763",
+      "created_at": "2026-10-10T12:04:00Z",
+      "created_by": "demo-agent",
+      "updated_at": "2026-10-10T12:06:00Z",
+      "updated_by": "demo-agent",
+      "revision": 6,
+      "task_id": "t_760cdf98507e4fd3949f399f1f7897aa",
+      "lane_id": "l_56f3ef9c7a3b49c08ca9443669e45598",
+      "title": "検証範囲の選択",
+      "body": "範囲を選択する",
+      "reason": "範囲確定が必要",
+      "options": [
+        "単体テスト",
+        "統合テストも含む"
+      ],
+      "due_at": null,
+      "status": "applied",
+      "answer": {
+        "text": "統合テストも含む",
+        "respondent": "demo-user",
+        "recorded_by": "demo-agent",
+        "recorded_at": "2026-10-10T12:05:00Z"
+      },
+      "application": {
+        "evidence": "統合試験を追加",
+        "applied_by": "demo-agent",
+        "applied_at": "2026-10-10T12:06:00Z",
+        "resumed_task": true
+      }
+    }
+  ],
+  "comments": [
+    {
+      "id": "c_457b7554802a4c9d814c19365c3ce619",
+      "target_type": "task",
+      "target_id": "t_760cdf98507e4fd3949f399f1f7897aa",
+      "body": "全試験成功。結果を確認した。",
+      "created_at": "2026-10-10T12:07:00Z",
+      "created_by": "demo-agent",
+      "event_seq": 7
+    }
+  ],
+  "attachments": [
+    {
+      "id": "a_494383d5c3774f69a189eef1b68eb3bc",
+      "target_type": "comment",
+      "target_id": "c_457b7554802a4c9d814c19365c3ce619",
+      "filename": "result.txt",
+      "description": "架空の検証ログ",
+      "media_type": "text/plain",
+      "size_bytes": 40,
+      "sha256": "39dece3df775ef9d82c9ad303ae268059e6c9578071fbe40e9335e43a7ff9193",
+      "blob_path": "blobs/sha256/39/39dece3df775ef9d82c9ad303ae268059e6c9578071fbe40e9335e43a7ff9193",
+      "created_at": "2026-10-10T12:08:00Z",
+      "created_by": "demo-agent",
+      "event_seq": 8
+    }
+  ]
+}

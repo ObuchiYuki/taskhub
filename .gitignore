@@ -1,0 +1,14 @@
+.DS_Store
+xcuserdata/
+DerivedData/
+.build/
+build/
+*.xcresult
+.swiftpm/
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+_logs/
+run.sh
+taskhub-data/
